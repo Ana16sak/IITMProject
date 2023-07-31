@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>view Categories</h2>
+                <br><br>
+                {% for category in categories %}
+                <li>{{ category.name }}</li> <br>
+                {% endfor %}
+            </div>
+            <div class="col">
+                <form action="/add_category" method="post">
+                    <label for="category">Add Category</label>
+                    <input type="text" name="category" id="category">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
