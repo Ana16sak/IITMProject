@@ -13,17 +13,13 @@
                 <h2>view Categories</h2>
                 <br><br>
                 {% for category in categories %}
-                <li>{{ category.name }} <a href="/products/{{category.name}}">View</a> <a href="/delete_category/{{category.id}}">Delete</a></li> <br>
+                <li>{{ category.name }} <a href="/products_user/{{category.name}}">View</a></li> <br>
                 {% endfor %}
             </div>
-            <div class="col">
-                <form action="/add_category" method="post">
-                    <label for="category">Add Category</label>
-                    <input type="text" name="category" id="category">
-                    <input type="submit">
-                </form>
-            </div>
         </div>
+
+        <a href="/view_cart">View Cart</a>
+
     </div>
     
 </body>

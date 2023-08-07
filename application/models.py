@@ -20,3 +20,9 @@ class Product(db.Model,UserMixin):
     Manu_date = db.Column(db.String, nullable=False)
     rate = db.Column(db.Integer)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+
+
+class Cart(db.Model,UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    product_id = db.Column(db.Integer, db.ForeignKey('category.id'))

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for product in products %}
+        <li>{{ product.name }} <a href="/delete_products/{{ product.id }}">Delete</a></li> <br>
+    {% endfor %}
+    <div class="col">
+        <form action="/add_products/{{category.name}}" method="post">
+            <label for="product">Name</label>
+            <input type="text" name="name" id="product">
+            <label for="product">Manufacturing Date</label>
+            <input type="datetime" name="date" id="product">
+            <label for="product">Rate of Product</label>
+            <input type="number" name="rate" id="product">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
